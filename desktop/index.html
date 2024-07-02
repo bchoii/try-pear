@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        margin: 0;
+        padding: 0;
+
+        font-family: monospace;
+        color: white;
+      }
+
+      pear-ctrl {
+        -webkit-app-region: drag;
+        display: flow-root;
+      }
+
+      main {
+        display: grid;
+        place-content: center;
+      }
+
+      button,
+      input {
+        border: 1px ridge #b0d944;
+        background: #000;
+        color: #b0d944;
+        padding: 0.45rem;
+        font-size: 1rem;
+        line-height: 1rem;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      #or {
+        margin: 1.5rem auto;
+      }
+
+      #setup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #loading {
+        align-self: center;
+      }
+
+      #chat {
+        display: grid;
+      }
+
+      #header {
+        margin-top: 2.2rem;
+        margin-bottom: 0.75rem;
+      }
+
+      #details {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #messages {
+        flex: 1;
+        font-family: "Courier New", Courier, monospace;
+        overflow-y: scroll;
+      }
+
+      #message-form {
+        display: flex;
+      }
+
+      #message {
+        flex: 1;
+      }
+    </style>
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <pear-ctrl></pear-ctrl>
+    <main>
+      <div id="setup">
+        <div>
+          <button id="create-chat-room">Create</button>
+        </div>
+        <div id="or">- or -</div>
+        <form id="join-form">
+          <button type="submit" id="join-chat-room">Join</button>
+          <input
+            required
+            id="join-chat-room-topic"
+            type="text"
+            placeholder="Chat room Topic"
+          />
+        </form>
+      </div>
+      <div id="loading" class="hidden">Loading ...</div>
+      <div id="chat" class="hidden">
+        <div id="header">
+          <div id="details">
+            <div>Topic: <span id="chat-room-topic"></span></div>
+            <div>Peers: <span id="peers-count">0</span></div>
+          </div>
+        </div>
+        <div id="messages"></div>
+        <form id="message-form">
+          <input id="message" type="text" />
+          <input type="submit" value="Send" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
