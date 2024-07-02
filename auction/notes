@@ -1,10 +1,12 @@
 Auction App
 
-AddPiece
+CreatePiece
   pieceId
   pieceSource (self)
   winningSource
   winningPrice
+AddPiece
+  pieceId
 Bid
   pieceId
   pieceSource

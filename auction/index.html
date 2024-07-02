@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        color: #ccc;
+        font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      }
+
+      pre {
+        white-space: pre-wrap;
+        word-break: break-all;
+        scrollbar-width: thin;
+      }
+
+      pear-ctrl {
+        -webkit-app-region: drag;
+        display: flow-root;
+        position: sticky;
+        top: 0;
+      }
+
+      #root {
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      button {
+        padding: 2px;
+        border: 1px solid white;
+      }
+
+      .box {
+        padding: 2px;
+        margin: 2px;
+        border: 1px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <pear-ctrl></pear-ctrl>
+    <div id="root"></div>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
