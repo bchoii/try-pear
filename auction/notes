@@ -1,0 +1,15 @@
+Auction App
+
+AddPiece
+  pieceId
+  pieceSource
+  winningSource
+  winningPrice
+Bid
+  pieceId
+  pieceSource
+  bidSource
+  bidTime
+CloseAuction
+  pieceStatus
+
