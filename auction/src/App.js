@@ -58,7 +58,10 @@ export function App() {
     );
   }
 
-  function close(pieceId) {}
+  function close(pieceId) {
+    console.log("Close", pieceId);
+    setPieces((pieces) => pieces.filter((p) => p.pieceId != pieceId));
+  }
 
   return html`<${AppContext.Provider} value=${{
     input,
@@ -70,6 +73,7 @@ export function App() {
     addPiece,
 
     bid,
+    close,
   }}>
     <div>
       Auction App

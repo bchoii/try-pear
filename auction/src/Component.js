@@ -32,13 +32,7 @@ export function Component() {
       </form>
     </div>
 
-    ${pieces.map(
-      (piece) => html`
-        <div>
-          <${Piece} piece=${piece} />
-        </div>
-      `
-    )}
+    ${pieces.map((piece) => html` <${Piece} piece=${piece} /> `)}
 
     <div>
       <ol>

@@ -24,7 +24,7 @@ export function Piece({ piece }) {
     };
   }, []);
 
-  const { bid } = value;
+  const { bid, close } = value;
 
   return html`<div class="box">
     <div>Piece #${piece.pieceId}</div>
@@ -32,6 +32,9 @@ export function Piece({ piece }) {
       ? html`
           <div>Bid Count: ${bidCount}</div>
           <div>Latest Bid By: ${bidSource}</div>
+          <div>
+            <button onClick=${() => close(piece.pieceId)}>Close</button>
+          </div>
         `
       : html`<button onClick=${() => bid(piece.pieceId)}>Bid</button>`}
   </div>`;
