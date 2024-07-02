@@ -17,7 +17,7 @@ export function addEventListener(event, listener) {
 }
 
 export function removeEventListener(event, listener) {
-  (listeners[event] || []).splice(listeners.indexOf(listener), 1);
+  (listeners[event] || []).splice(listeners[event].indexOf(listener), 1);
 }
 
 function fireEvent(event, payload) {
