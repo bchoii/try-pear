@@ -2,14 +2,15 @@ Auction App
 
 AddPiece
   pieceId
-  pieceSource
+  pieceSource (self)
   winningSource
   winningPrice
 Bid
   pieceId
   pieceSource
-  bidSource
-  bidTime
+  bidSource (self)
+  bidTime (now)
 CloseAuction
   pieceStatus
-
+  finalSource
+  finalPrice

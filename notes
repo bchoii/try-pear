@@ -1,0 +1,45 @@
+Requires runtime ?
+Can it be a library ?
+
+Cannot import 'pears';
+
+Typescript support ?
+
+p2p game ?
+
+---
+
+would be helpful:
+  intro / overview
+  p2p fundamentals
+
+youtube
+  cannot see code.
+  "p2p is now"? "p2p is here".
+
+---
+
+pear init
+pear stage
+  generates key / identifier hash.
+  Compile ? Bundle ?
+pear seed
+  publicises application on DHT.
+pear run
+  on remote machines.
+
+---
+
+Hypercore
+  distributed data
+  persisting p2p state
+
+Hyperbee
+  key/value-store
+
+Hyperdrive
+  file system / Drive
+
+Hyperswarm
+  connecting peers
+  Distributed Hash Table
